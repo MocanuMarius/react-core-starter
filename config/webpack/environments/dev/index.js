@@ -47,6 +47,7 @@ module.exports = {
         hot: true
     },
     plugins: [
+		new webpack.EnvironmentPlugin(['NODE_ENV']),
         new plugins.CopyWebpackPlugin([
             {
                 from: {
@@ -62,6 +63,7 @@ module.exports = {
             }
         ]),
         new webpack.HotModuleReplacementPlugin(),
+		// These should be production only
 		// new plugins.ExtractTextPlugin({filename: "style.css", allChunks: true}),
         // new webpack.optimize.UglifyJsPlugin({
         //     compress: {
@@ -70,20 +72,12 @@ module.exports = {
         // })
     ],
     resolve: {
-        // Add `.ts` and `.tsx` as a resolvable extension.
         extensions: [
             '.webpack.js',
             '.web.js',
-            '.ts',
-            '.tsx',
             '.js',
             '.html'
         ]
     }
-    // ,
-    // sassLoader : {
-    //     includePaths: [path.resolve(__dirname, "./src/**/sass")],
-    //     indentedSyntax: true
-    // }
 
 };
