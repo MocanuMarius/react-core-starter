@@ -30,8 +30,12 @@ extends React.Component {
 				{items.map((item) =>
 				  <li>{item.label}</li>
 			  )}
-			  <div className="col col-md-4">
-			  	<button className="btn btn-danger"> Hellwww	 </button>
+			  <div className="container">
+			  	<div className="row">
+					<div className="col col-md-12">
+						<button className="btn btn-warning"> OK </button>
+					</div>
+				</div>
 			  </div>
 
             </div>
