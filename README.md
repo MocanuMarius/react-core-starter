@@ -1,18 +1,23 @@
-# clean should include
-	-rm rf of dist WWW
-
-# deploy should include
-	-scripts for optimizations
-	- environment variables and flags
-
-#
+###Using MobX for state management
 
 #TODO
-	- Different config files and folder structure for webpack
+
+	- Add MobX boilerplate
+
+	- Add login / Auth boilerplate
+
+	- Fix production build and output
+
+	- Add code splitting separate config file in root, maybe could be done with a visual editor -component tree browser addon or someting ?
+
 	- Add environment path configurables
-	- Add jade and bootstrap as a dependency
+
 	- Add autoprefixer for css classess
+
 	- extract text plugin for css
-	- add support for external JS like bootstrap, etc
-	- add sourcemap true for dev config (maybe read about them too)
+
+	- add sourcemap true for dev config (maybe read about them too)0
+
 	- add console.log removals for productionbuilds
+
+	- rm rf of dist WWW on production build start
