@@ -5,7 +5,7 @@ export default class SampleView extends React.Component {
     render() {
 		return (
 			<div>
-				<h1> Sample view with params { this.state.props }</h1>
+				<h1> Sample view with param3s { this.state.props }</h1>
 				<p> Hey ? </p>
 			</div>
 		)

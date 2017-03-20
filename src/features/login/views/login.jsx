@@ -1,23 +1,18 @@
 import React from 'react'
 import {render} from 'react-dom'
 import { Link } from "react-router-dom"
+// import { history } from "./../../../main/script/history.jsx"
 
-
-export default class LoginView extends React.Component {
-	goToHome(){
-
-	}
+export default class SampleView extends React.Component {
+	goToHome(){ console.log("going home") }
     render() {
 		return (
 			<div>
-				<h1> Bullshit man..</h1>
+				<h1> Navgatsed3 .433333...</h1>
 				<p> Hey ? </p>
-				<button onclick={this.goToHome.bind(this)}>
-					<Link to={{ pathname: '/sampleView'}} /> G3O2 T3O HOM3E
-				</button>
 			</div>
 		)
 	}
 }
 
-module.exports = LoginView
+module.exports = SampleView
