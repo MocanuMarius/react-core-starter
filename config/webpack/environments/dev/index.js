@@ -47,7 +47,6 @@ module.exports = {
         hot: true
     },
     plugins: [
-		new webpack.EnvironmentPlugin(['NODE_ENV']),
         new plugins.CopyWebpackPlugin([
             {
                 from: {

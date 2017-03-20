@@ -1,13 +1,21 @@
 import React from 'react';
 import {render} from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory} from 'react-router'
 
-System.import("../../features/button/button.jsx").then((niceButton) => {})
-import NiceButton from '../../features/button/button.jsx'
+import stateResolver from "./stateResolver.jsx"
+import LoginView from "../../features/login/views/login.jsx"
 
 export default class App extends React.Component {
-    render() {
-        console.log(" THE ENVIRONMENT IS", process.env.NODE_ENV)
-        return (<NiceButton message="myMs3333g2"/>)
+	constructor(props){ super(props) }
+
+	render() {
+		return (
+			<Router history={ browserHistory }>
+				<Route path="/" component={ stateResolver } />
+				<Route path="/login" component={ LoginView } />
+			</Router>
+		)
     }
 }
+
 module.exports = App
