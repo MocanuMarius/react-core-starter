@@ -1,15 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { history } from "./../../../main/script/history.jsx"
 
 export default class SampleView extends React.Component {
-    render() {
+
+	constructor(props){
+		super(props)
+	}
+	render() {
 		return (
 			<div>
-				<h1> Sample view with param3s { this.state.props }</h1>
+				<h1> Sample view with para333d3m3s33</h1>
 				<p> Hey ? </p>
+				<button onClick={ this.props.history.goBack.bind(this) }> BACK ?!!</button>
 			</div>
-		)
+		);
 	}
 }
-
-module.exports = SampleView

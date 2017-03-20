@@ -1,17 +1,16 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import RootContainer from './rootContainer.jsx';
+import {render} from 'react-dom'
 
-class App extends React.Component {
-  render () {
-    return (
-		<AppContainer>
-	      <RootContainer />
-	    </AppContainer>
-	)
-  }
-}
+
+ReactDOM.render(
+  <AppContainer>
+    <RootContainer/>
+  </AppContainer>,
+  document.getElementById('app')
+);
 
 if (module.hot) {
   module.hot.accept('./rootContainer.jsx', () => {
