@@ -11,8 +11,7 @@ export default class SampleView extends React.Component {
 		return (
 			<div>
 				<h1> Sample view with para333d3m3s33</h1>
-				<p> Hey ? </p>
-				<button onClick={ this.props.history.goBack.bind(this) }> BACK ?!!</button>
+				<button onClick={ this.props.history.goBack.bind(this) }> B3ACK ?!!</button>
 			</div>
 		);
 	}
