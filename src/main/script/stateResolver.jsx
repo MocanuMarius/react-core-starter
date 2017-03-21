@@ -5,7 +5,7 @@ import {render} from 'react-dom'
 import LoginView from "../../features/login/views/login.jsx"
 import SampleView from "../../features/sample/views/sample.jsx"
 
-import browserHistory from './history.jsx'
+import browserHistory from './internal/history.jsx'
 
 class StateResolver extends React.Component {
 

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --env.API_PROXY DEV",
-	"start-live": "webpack-dev-server --env.API_PROXY PROD",
-	"dist-bundle": "webpack",
+    "start-live": "webpack-dev-server --env.API_PROXY PROD",
+    "dist-bundle": "webpack",
     "prod-bundle": "webpack -p"
   },
   "author": "",
@@ -19,6 +19,7 @@
     "bootstrap": "^3.3.7",
     "copy-webpack-plugin": "^2.1.1",
     "html-webpack-plugin": "^2.19.0",
+    "import-glob-loader": "^1.1.0",
     "node-sass": "^4.5.0",
     "react-css-modules": "^4.1.0",
     "react-hot-loader": "^3.0.0-beta.6",
