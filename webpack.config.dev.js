@@ -5,6 +5,7 @@ var path = require('path');
 // Make sure any plugins are exported there
 var root = process.cwd()
 var __devProxy = require(path.join(root, "config", "./dev-server-proxy"))
+var CopyWebpackPlugin = require("copy-webpack-plugin")
 
 module.exports = function(env) {
     return {
@@ -14,7 +15,7 @@ module.exports = function(env) {
             root + "/src/main/sass/main.sass"
         ],
         output: {
-            path: path.join(root, 'dist', 'www'),
+            path: path.join(root, 'dist', 'dev'),
             filename: "bundle.js"
         },
         module: {
@@ -39,14 +40,26 @@ module.exports = function(env) {
         },
         devServer: {
             port: 3000,
-            contentBase: path.join(root, 'dist', 'www'),
+            contentBase: path.join(root, 'dist', 'dev'),
             historyApiFallback: true,
             hot: true,
             proxy: __devProxy(env)
         },
-		plugins:[
-			    new webpack.HotModuleReplacementPlugin()
-		],
+        plugins: [
+            new webpack.HotModuleReplacementPlugin(),
+            new CopyWebpackPlugin([
+                {
+                    from: root + '/src/index.html',
+                    to: path.join(root, "dist", "dev"),
+                    flatten: true
+                }
+            ]),
+            new webpack.LoaderOptionsPlugin({
+                options: {
+                    devTool: 'sourcemap'
+                }
+            })
+        ],
         resolve: {
             extensions: ['.webpack.js', '.web.js', '.js', '.html']
         }
