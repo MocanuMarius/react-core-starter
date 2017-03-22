@@ -31,7 +31,7 @@ module.exports = function(env) {
                     loaders: ['style-loader', 'css-loader', 'sass-loader?indentedSyntax=true']
                 }, {
                     test: /\.scss$/,
-                    loaders: ['style-loader', 'css-loader', 'sass-loader']
+                    loaders: ['style-loader', 'css-loader', 'sass-loader?indentedSynax=false']
                 }, {
                     test: /\.(png|woff|woff2|eot|ttf|svg)$/,
                     loader: 'url-loader?limit=100000'

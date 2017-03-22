@@ -2,10 +2,9 @@ import React from 'react'
 import { Router, Route, IndexRoute , Redirect } from 'react-router'
 import {render} from 'react-dom'
 
-import stateResolver from "./stateResolver.jsx"
+import { StateResolver } from "./stateResolver.jsx"
 import LoginView from "../../features/login/views/login.jsx"
 import SampleView from "../../features/sample/views/sample.jsx"
-import routeInterceptor from "../route-interceptor.js"
 
 let routes = require("../route-loader.js").default
 
@@ -24,7 +23,7 @@ export default class App extends React.Component {
 		return (
 			<Router history={ browserHistory } onuupdate={this.getInfo.bind(this)}>
 				<div>
-				<Route path="/" component={ stateResolver }/>
+				<Route path="/" component={ StateResolver }/>
 				{ routes.map((item) =>
 					<Route
 							key={ item.path }
