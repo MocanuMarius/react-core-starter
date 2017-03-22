@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --env.API_PROXY DEV",
-    "start-live": "webpack-dev-server --env.API_PROXY PROD",
-    "dist-bundle": "webpack",
-    "prod-bundle": "webpack -p"
+    "start": "webpack-dev-server --env.API_PROXY=dev --env.BUILDMODE=dev",
+    "start-live": "webpack-dev-server --env.API_PROXY=dev --env.BUILDMODE=dev",
+    "prod-bundle": "webpack -p --env.BUILDMODE=dist"
   },
   "author": "",
   "license": "ISC",

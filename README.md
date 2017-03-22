@@ -2,6 +2,10 @@
 
 #TODO
 
+	- extract text plugin
+
+	- Add console.log removals for production
+
 	- Add MobX boilerplate
 
 	- Add login / Auth boilerplate
@@ -21,3 +25,5 @@
 	- add console.log removals for productionbuilds
 
 	- rm rf of dist WWW on production build start
+
+	- bundle analyzer

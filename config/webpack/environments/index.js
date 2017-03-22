@@ -1,7 +1,7 @@
-var production = require('./production');
+var dist = require('./dist');
 var dev = require('./dev');
 
 module.exports = {
-	production: production,
+	dist: dist,
 	dev: dev
 }

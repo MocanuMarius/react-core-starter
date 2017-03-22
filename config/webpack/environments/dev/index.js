@@ -3,7 +3,6 @@ var webpack = require('webpack')
 var path = require('path');
 // ------------------------------------------------------------------ PLUGINS
 // Make sure any plugins are exported there
-var plugins = require('./plugins')
 var root = process.cwd()
 var __devProxy = require(path.join(root, "config", "./dev-server-proxy"))
 
@@ -45,23 +44,9 @@ module.exports = function(env) {
             hot: true,
             proxy: __devProxy(env)
         },
-        plugins: [
-            new plugins.CopyWebpackPlugin([
-                {
-                    from: {
-                        glob: root + "/src/**/www/**/*.html",
-                        dot: true
-                    },
-                    to: path.join(root, "dist", "www", "partials"),
-                    flatten: true
-                }, {
-                    from: root + '/src/index.html',
-                    to: path.join(root, "dist", "www"),
-                    flatten: true
-                }
-            ]),
-            new webpack.HotModuleReplacementPlugin()
-        ],
+		plugins:[
+			    new webpack.HotModuleReplacementPlugin()
+		],
         resolve: {
             extensions: ['.webpack.js', '.web.js', '.js', '.html']
         }
