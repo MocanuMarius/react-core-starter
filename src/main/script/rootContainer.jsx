@@ -21,15 +21,15 @@ export default class App extends React.Component {
 		return (
 			<Router history={ browserHistory } onuupdate={this.getInfo.bind(this)}>
 				<div>
-				<Route path="/" component={ StateResolver }/>
-				<Route path="*" component={ StateResolver }/>
-				{ routes.map((item) =>
-					<Route
-							key={ item.path }
-							path={ item.path }
-							component={ item.component }
-							/>
-				 )}
+					<Route path="/" component={ StateResolver }/>
+					<Route path="*" component={ StateResolver }/>
+					{ routes.map((item) =>
+						<Route
+								key={ item.path }
+								path={ item.path }
+								component={ item.component }
+								/>
+					 )}
 				</div>
 			</Router>
 		);

@@ -4,6 +4,7 @@ import {Route, Redirect} from "react-router";
 import {RestrictedRoute} from "../../../main/script/stateResolver.jsx"
 import { observer } from "mobx-react"
 import { observable } from "mobx"
+import DevTools from 'mobx-react-devtools';
 
 console.log("restr", RestrictedRoute)
 
@@ -28,6 +29,8 @@ class SampleView extends React.Component {
 		return (
 
 			<div className="container-fluid mt-4">
+				<DevTools />
+
 				<RestrictedRoute enabled={false}/>
 				<div className="col col-md-1">
 				</div>

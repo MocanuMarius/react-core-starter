@@ -37,7 +37,7 @@ module.exports = function(env) {
 					}
                 }, {
                     test: /\.jsx?$/,
-                    use: ['babel-loader?presets[]=react,presets[]=es2015'],
+                    use: ['babel-loader?presets[]=react,presets[]=es2015,plugins[]=transform-decorators-legacy'],
                     exclude: /node_modules/
                 }
             ]
