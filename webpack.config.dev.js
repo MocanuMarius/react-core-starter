@@ -19,22 +19,27 @@ module.exports = function(env) {
             filename: "bundle.js"
         },
         module: {
-            loaders: [
+            rules: [
                 {
-                    test: /\.jsx?$/,
-                    loaders: [
-                        'react-hot-loader/webpack', 'babel-loader?presets[]=react,presets[]=es2015'
-                    ],
-                    exclude: /node_modules/
-                }, {
                     test: /\.sass$/,
-                    loaders: ['style-loader', 'css-loader', 'sass-loader?indentedSyntax=true']
+                    use: ['style-loader', 'css-loader', 'sass-loader?indentedSyntax=true']
                 }, {
                     test: /\.scss$/,
-                    loaders: ['style-loader', 'css-loader', 'sass-loader?indentedSynax=false']
+                    use: ['style-loader', 'css-loader', 'sass-loader?indentedSynax=false']
                 }, {
                     test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-                    loader: 'url-loader?limit=100000'
+                    use: {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 100000
+                        }
+                    }
+                }, {
+                    test: /\.jsx?$/,
+                    use: [
+                    	'react-hot-loader/webpack', 'babel-loader?presets[]=react,presets[]=es2015,plugins[]=transform-decorators-legacy'
+                    ],
+                    exclude: /node_modules/
                 }
             ]
         },
@@ -61,7 +66,19 @@ module.exports = function(env) {
             })
         ],
         resolve: {
-            extensions: ['.webpack.js', '.web.js', '.js', '.html']
+            extensions: [
+                '.webpack.js',
+                '.web.js',
+                '.js',
+                '.html',
+                '.jsx',
+                '.png',
+                '.woff',
+                '.woff2',
+                '.eot',
+                '.ttf',
+                '.svg'
+            ]
         }
     }
 };

@@ -15,7 +15,7 @@ export class RestrictedRoute extends React.Component {
 	render() {
 		if (this.props.enabled) {
 			return (<Redirect to={defaultRoute} />)
-		} else return (<h1> No need </h1>)
+		} else return null
 	}
 }
 
