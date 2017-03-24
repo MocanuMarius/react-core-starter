@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import RootContainer from './rootContainer.jsx';
-import {render} from 'react-dom'
-require("../sass/assets/fonts/icons.ttf")
+import { render } from 'react-dom'
 
 ReactDOM.render(
   <AppContainer>

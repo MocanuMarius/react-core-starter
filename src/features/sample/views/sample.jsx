@@ -4,8 +4,14 @@ import {Route, Redirect} from "react-router";
 import {RestrictedRoute} from "../../../main/script/stateResolver.jsx"
 import {observer} from "mobx-react"
 import {observable} from "mobx"
-import DevTools from 'mobx-react-devtools';
-import {Input, Button , Menu, Segment, Icon} from 'semantic-ui-react'
+// import DevTools from 'mobx-react-devtools';
+
+import Input from 'semantic-ui-react/dist/commonjs/elements/Input'
+import Button from 'semantic-ui-react/dist/commonjs/elements/Button'
+import Menu from 'semantic-ui-react/dist/commonjs/collections/Menu'
+import Segment from 'semantic-ui-react/dist/commonjs/elements/Segment'
+import Icon from 'semantic-ui-react/dist/commonjs/elements/Icon'
+
 
 console.log("restr", RestrictedRoute)
 
@@ -45,7 +51,6 @@ class SampleView extends React.Component {
         return (
 
             <div className="container-fluid mt-4">
-                <DevTools/>
                 <Button>
                     Click Here
                 </Button>

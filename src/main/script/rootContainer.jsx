@@ -6,7 +6,7 @@ import { StateResolver } from "./stateResolver.jsx"
 import LoginView from "../../features/login/views/login.jsx"
 import SampleView from "../../features/sample/views/sample.jsx"
 
-let routes = require("../route-loader.js").default
+let routes = require("./route-loader.js").default
 
 import browserHistory from './internal/history.jsx'
 
